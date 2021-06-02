@@ -1,4 +1,4 @@
 ## ScoopWhoop Task
 
-Hosted on the link below:
+Hosted on:
 https://scoopwhooptask.herokuapp.com/
