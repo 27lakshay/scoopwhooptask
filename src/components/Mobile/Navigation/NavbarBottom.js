@@ -23,9 +23,11 @@ const NavbarBottom = () => {
     return (
         <nav className="mobile_nav_bottom" style={{ bottom: bottomNavVisibility }}>
             <ul className="nav_bottom_options">
-                {bottomNavOptions.map((option) => (
-                    <li className="mobile_nav_bottom_option">
-                        <a href="#"><span>{option}</span></a>
+                {bottomNavOptions.map((option, index) => (
+                    <li key={index} className="mobile_nav_bottom_option">
+                        <a href="#">
+                            <span>{option}</span>
+                        </a>
                     </li>
                 ))}
             </ul>

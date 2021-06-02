@@ -6,23 +6,12 @@ import ArticleCard from "./ArticleCard";
 const Tab = () => {
     const [items, setItems] = useState([]);
     const [offset, setOffset] = useState(8);
-    // const style = {
-    //     height: 30,
-    //     border: "1px solid green",
-    //     margin: 6,
-    //     padding: 8,
-    // };
 
     useEffect(() => {
         return fetchMoreData();
     }, []);
 
     const fetchMoreData = async () => {
-        // a fake async api call like which sends
-        // 20 more records in 1.5 secs
-        // setTimeout(() => {
-        //     setItems(items.concat(Array.from({ length: 20 })));
-        // }, 1500);
         await axios({
             method: "GET",
             url: `https://www.scoopwhoop.com/api/v4/read/all/?offset=${offset}&limit=8`,
@@ -40,9 +29,9 @@ const Tab = () => {
                 scrollThreshold={1}
                 loader={<h4>Loading...</h4>}
             >
-                {items.map((item) => (
+                {items.map((item, index) => (
                     // <div>{item.title}</div>
-                    <ArticleCard data={item} />
+                    <ArticleCard key={index} data={item} />
                 ))}
             </InfiniteScroll>
         </div>

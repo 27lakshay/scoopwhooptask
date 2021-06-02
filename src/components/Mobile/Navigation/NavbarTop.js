@@ -5,7 +5,7 @@ const NavbarTop = () => {
         <nav className="mobile_nav_top">
             <ul className="mobile_nav_top_options">
                 <li className="mobile_nav_search">
-                    <i class="fa-search fas fa-2x text-white"></i>
+                    <i className="fa-search fas fa-2x text-white"></i>
                 </li>
                 <li className="mobile_nav_logo">
                     <a href="#">
@@ -14,7 +14,7 @@ const NavbarTop = () => {
                 </li>
                 <li className="mobile_nav_toggler">
                     <a href="#">
-                        <i class="fas fa-2x text-white fas fa-bars"></i>
+                        <i className="fas fa-2x text-white fas fa-bars"></i>
                     </a>
                 </li>
             </ul>

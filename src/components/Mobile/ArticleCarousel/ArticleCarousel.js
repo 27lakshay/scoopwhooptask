@@ -20,8 +20,8 @@ const ArticleCarousel = () => {
     return (
         <section className="mobile_article_carousel">
             <div className="mobile_article_carousel_container">
-                {data.map((article) => (
-                    <ArticleCarouselCard data={article} />
+                {data.map((article, index) => (
+                    <ArticleCarouselCard key={index} data={article} />
                 ))}
             </div>
         </section>
