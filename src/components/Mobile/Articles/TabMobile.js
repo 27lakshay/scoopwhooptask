@@ -11,8 +11,8 @@ const TabMobile = () => {
         return fetchMoreData();
     }, []);
 
-    const fetchMoreData = async () => {
-        await axios({
+    const fetchMoreData = () => {
+        axios({
             method: "GET",
             url: `https://www.scoopwhoop.com/api/v4/read/all/?offset=${offset}&limit=8`,
         })
@@ -30,7 +30,7 @@ const TabMobile = () => {
                 scrollThreshold="10px"
                 loader={<h4>Loading...</h4>}
             >
-                {items.map((item,index) => (
+                {items.map((item, index) => (
                     // <div>{item.title}</div>
                     <ArticleCardMobile key={index} data={item} />
                 ))}

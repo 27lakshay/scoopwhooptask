@@ -11,8 +11,8 @@ const Tab = () => {
         return fetchMoreData();
     }, []);
 
-    const fetchMoreData = async () => {
-        await axios({
+    const fetchMoreData = () => {
+        axios({
             method: "GET",
             url: `https://www.scoopwhoop.com/api/v4/read/all/?offset=${offset}&limit=8`,
         })
